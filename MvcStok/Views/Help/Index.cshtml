@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal1">
+    Yardım
+</button>
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Yardım Menüsü</h2>
+            </div>
+            <form>
+                <div class="modal-body">
+                   <div>
+                       <p>Merhaba ben Tarık İnandı.</p>
+                       <br />
+                       <p>Bu uygulama ile ilgili herhangi bir sorunuz olursa bana ulaşabilirsiniz.</p>
+                       <br />
+                       <p>Mail: inandi.tarik@gmail.com</p>
+                       <br />
+                       <p>&copy; @DateTime.Now.Year - Stok Takip Projesi</p>
+                   </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

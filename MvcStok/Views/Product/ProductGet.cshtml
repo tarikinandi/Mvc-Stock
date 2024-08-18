@@ -1,0 +1,32 @@
+﻿@model MvcStok.Models.Entity.TBLURUNLER
+@{
+    ViewBag.Title = "ProductGet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Update", "Product", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(x => x.ID)
+        @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+        <br />
+        @Html.LabelFor(x => x.AD)
+        @Html.TextBoxFor(x => x.AD, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(x => x.MARKA)
+        @Html.TextBoxFor(x => x.MARKA, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(x => x.KATEGORI)
+        @Html.DropDownListFor(x=> x.TBLKATEGORILER.ID , (List<SelectListItem>)ViewBag.value, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(x => x.FIYAT)
+        @Html.TextBoxFor(x => x.FIYAT, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(x => x.STOK)
+        @Html.TextBoxFor(x => x.STOK, new { @class = "form-control" })
+    </div>
+    <div>
+        <button type="submit" class="btn btn-success">Güncelle</button>
+    </div>
+}
+
